@@ -23,7 +23,8 @@ src/
 ## Getting Started
 
 ### Prerequisites
-- Node.js 16+ 
+
+- Node.js 16+
 - npm or yarn
 
 ### Installation
@@ -73,23 +74,29 @@ npm run preview
 ## Components
 
 ### HeroSection
+
 Large banner with headline, subheadline, and CTA buttons for seasonal offerings.
 
 ### OfferingSection
+
 Two-column grid showcasing Fall 2026 and Spring 2027 service offerings.
 
 ### PhilosophySection
+
 Brand philosophy with three key values: Peaceful, Bountiful, Beautiful.
 
 ### SignatureGardensSection
+
 Gallery of four signature garden packages with images and descriptions.
 
 ### NewsletterSection
+
 Email signup form with benefits list for the Spring 2027 garden list.
 
 ## Deployment
 
 The built site can be deployed to any static hosting service:
+
 - Netlify
 - Vercel
 - GitHub Pages
