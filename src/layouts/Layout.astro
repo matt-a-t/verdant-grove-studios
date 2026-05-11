@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Verdant Grove Studio', description = 'Raised beds for intentional, seasonal living' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style>
+      header {
+        background-color: var(--color-white);
+        border-bottom: 1px solid #e5e5e5;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-md) var(--spacing-lg);
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: var(--spacing-lg);
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--color-dark-text);
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      footer {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: var(--spacing-2xl) var(--spacing-lg);
+        margin-top: var(--spacing-2xl);
+      }
+
+      footer .container {
+        text-align: center;
+      }
+
+      footer p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Verdant Grove Studio</div>
+        <ul class="nav-links">
+          <li><a href="#offerings">Our Offerings</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#gardens">Signature Gardens</a></li>
+          <li><a href="#newsletter">Join the List</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Verdant Grove Studio. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

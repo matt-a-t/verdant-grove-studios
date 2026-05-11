@@ -1,0 +1,161 @@
+---
+// Newsletter Section Component
+---
+
+<section id="newsletter" class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Join the Spring 2027 Garden List</h2>
+      <p class="newsletter-subtitle">Be the first to know about our newest offerings</p>
+
+      <div class="newsletter-form">
+        <form>
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            required 
+            aria-label="Email address"
+          />
+          <button type="submit" class="button-primary">Join the List</button>
+        </form>
+      </div>
+
+      <div class="benefits">
+        <h3>You'll receive:</h3>
+        <ul>
+          <li>
+            <span class="benefit-icon">📚</span>
+            <span>Seasonal Planting Guides</span>
+          </li>
+          <li>
+            <span class="benefit-icon">📅</span>
+            <span>Early Install Booking</span>
+          </li>
+          <li>
+            <span class="benefit-icon">🌱</span>
+            <span>Seedling Releases</span>
+          </li>
+          <li>
+            <span class="benefit-icon">✨</span>
+            <span>Garden Inspiration</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .newsletter {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    color: var(--color-white);
+  }
+
+  .newsletter-content {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .newsletter-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .newsletter-form {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .newsletter-form form {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+  }
+
+  .newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .newsletter-form input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .newsletter-form button {
+    background-color: var(--color-accent);
+    color: var(--color-dark-text);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #c49461;
+  }
+
+  .benefits {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+  }
+
+  .benefits h3 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+  }
+
+  .benefits ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+  }
+
+  .benefit-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-form form {
+      flex-direction: column;
+    }
+
+    .newsletter-form input {
+      min-width: auto;
+    }
+
+    .benefits ul {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

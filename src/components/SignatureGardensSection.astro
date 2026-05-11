@@ -1,0 +1,117 @@
+---
+// Signature Gardens Section Component
+---
+
+<section id="gardens" class="signature-gardens">
+  <div class="container">
+    <h2>Signature Gardens</h2>
+    <p class="section-subtitle">Preview your future installation packages</p>
+
+    <div class="gardens-grid">
+      <div class="garden-card">
+        <div class="garden-image herbal-tea"></div>
+        <h3>The Herbal Tea Garden</h3>
+        <p>A curated selection of herbs perfect for creating your own tea blends throughout the year.</p>
+      </div>
+
+      <div class="garden-card">
+        <div class="garden-image cut-flower"></div>
+        <h3>The Cut Flower Garden</h3>
+        <p>Grow your own bouquets with seasonal blooms designed for arrangements and displays.</p>
+      </div>
+
+      <div class="garden-card">
+        <div class="garden-image sunday-sauce"></div>
+        <h3>The Sunday Sauce Garden</h3>
+        <p>All the vegetables you need for delicious homemade pasta sauce and culinary creations.</p>
+      </div>
+
+      <div class="garden-card">
+        <div class="garden-image grill-night"></div>
+        <h3>The Grill Night Garden</h3>
+        <p>Fresh vegetables, herbs, and garnishes to elevate your outdoor entertaining and gatherings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .signature-gardens {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background-color: var(--color-white);
+  }
+
+  .signature-gardens h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .gardens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .garden-card {
+    background-color: var(--color-light-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .garden-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .garden-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-secondary);
+  }
+
+  .herbal-tea {
+    background-image: url('https://images.unsplash.com/photo-1598270827248-8054b2b5b5c8?w=600&h=400&fit=crop');
+  }
+
+  .cut-flower {
+    background-image: url('https://images.unsplash.com/photo-1583949645529-95d78ef326b1?w=600&h=400&fit=crop');
+  }
+
+  .sunday-sauce {
+    background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop');
+  }
+
+  .grill-night {
+    background-image: url('https://images.unsplash.com/photo-1576270017874-d0a9e82018d1?w=600&h=400&fit=crop');
+  }
+
+  .garden-card h3 {
+    color: var(--color-primary);
+    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-sm);
+    margin: 0;
+  }
+
+  .garden-card p {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-light-text);
+  }
+
+  @media (max-width: 768px) {
+    .gardens-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
