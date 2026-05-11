@@ -3,18 +3,26 @@
 ---
 
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-content motion-rise">
+    <p class="eyebrow">Premium casual garden design studio</p>
     <h1>Raised beds for intentional, seasonal living</h1>
     <p class="subheadline">
       Verdant Grove Studio creates bountiful, beautiful garden spaces for homes that value <strong>intention, beauty, and sustainability</strong>
     </p>
     <div class="cta-buttons">
-      <button class="button-primary">Shop Our Fall Seedlings</button>
-      <button class="button-secondary">Join the Spring 2027 Installation Waitlist</button>
+      <a class="button-primary" href="/fall-seedlings-shop">Shop Our Fall Seedlings</a>
+      <a class="button-secondary" href="/spring-2027-installations">Join the Spring 2027 Installation Waitlist</a>
+    </div>
+    <div class="secondary-links">
+      <a href="/about">Discover the Studio Story</a>
+      <a href="/begin-your-garden">Begin Your Garden</a>
     </div>
   </div>
-  <div class="hero-image">
+  <div class="hero-image motion-rise">
     <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&h=600&fit=crop" alt="Romantic garden with raised beds" />
+    <div class="hero-image-caption">
+      <p>Designed for beauty, built for use, rooted in rhythm.</p>
+    </div>
   </div>
 </section>
 
@@ -27,7 +35,7 @@
     padding: var(--spacing-2xl) var(--spacing-lg);
     max-width: var(--max-width);
     margin: 0 auto;
-    min-height: 600px;
+    min-height: 620px;
   }
 
   .hero-content {
@@ -56,11 +64,23 @@
     flex-wrap: wrap;
   }
 
+  .secondary-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .secondary-links a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+
   .hero-image {
     position: relative;
-    border-radius: 8px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-soft);
   }
 
   .hero-image img {
@@ -68,6 +88,24 @@
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  .hero-image-caption {
+    position: absolute;
+    left: var(--spacing-md);
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    background: rgba(15, 23, 12, 0.56);
+    color: #fff;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 10px;
+    backdrop-filter: blur(1.5px);
+  }
+
+  .hero-image-caption p {
+    color: #fff;
+    font-size: 0.96rem;
+    letter-spacing: 0.01em;
   }
 
   @media (max-width: 768px) {
@@ -81,7 +119,7 @@
       flex-direction: column;
     }
 
-    button {
+    .cta-buttons a {
       width: 100%;
     }
   }

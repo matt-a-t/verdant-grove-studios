@@ -4,57 +4,53 @@
 
 <section id="offerings" class="offerings">
   <div class="container">
-    <h2>Two Seasonal Pathways</h2>
+    <h2 class="motion-rise">Two Seasonal Pathways</h2>
     
     <div class="offerings-grid">
-      <!-- Fall 2026 -->
-      <div class="pathway fall-pathway">
+      <article class="pathway fall-pathway motion-rise">
         <h3>Fall 2026 Offerings</h3>
         <p class="pathway-tagline">Start Growing This Season</p>
         
         <ul class="services-list">
           <li>
-            <span class="service-icon">🌱</span>
-            <h4>Seedlings</h4>
+            <h4><a href="/fall-seedlings-shop#individual-seedlings">Seedlings</a></h4>
           </li>
           <li>
-            <span class="service-icon">🛠️</span>
-            <h4>Raised Bed Reset</h4>
+            <h4><a href="/begin-your-garden">Raised Bed Reset</a></h4>
           </li>
           <li>
-            <span class="service-icon">🪴</span>
-            <h4>Balcony Box Refresh</h4>
+            <h4><a href="/begin-your-garden">Balcony Box Refresh</a></h4>
           </li>
         </ul>
-      </div>
+        <a class="pathway-link" href="/fall-seedlings-shop">Explore the Fall Seedlings Shop</a>
+      </article>
 
-      <!-- Spring 2027 -->
-      <div class="pathway spring-pathway">
+      <article class="pathway spring-pathway motion-rise">
         <h3>Spring 2027 Offerings</h3>
         <p class="pathway-tagline">Garden Installations</p>
         
         <ul class="services-list">
           <li>
-            <span class="service-icon">🏡</span>
-            <h4>Signature Gardens</h4>
+            <h4><a href="/signature-gardens#spring-collections">Signature Gardens</a></h4>
           </li>
           <li>
-            <span class="service-icon">📋</span>
-            <h4>Planting Plans</h4>
+            <h4><a href="/signature-gardens#installation-packages">Planting Plans</a></h4>
           </li>
           <li>
-            <span class="service-icon">🪴</span>
-            <h4>Balcony Boxes</h4>
+            <h4><a href="/spring-2027-installations#what-we-offer">Balcony Boxes</a></h4>
           </li>
         </ul>
-      </div>
+        <a class="pathway-link" href="/spring-2027-installations">View Spring 2027 Installation Details</a>
+      </article>
     </div>
   </div>
 </section>
 
 <style>
   .offerings {
-    background-color: var(--color-light-bg);
+    background:
+      radial-gradient(circle at 20% 0%, rgba(198, 164, 122, 0.16), transparent 30%),
+      var(--color-light-bg);
     padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
@@ -71,11 +67,10 @@
   }
 
   .pathway {
-    background-color: var(--color-white);
-    padding: var(--spacing-xl);
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid var(--color-secondary);
+    padding: 0 0 var(--spacing-sm);
+    border-radius: 0;
+    border-top: 2px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-line);
   }
 
   .spring-pathway {
@@ -98,24 +93,30 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
 
   .services-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-md);
-  }
-
-  .service-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px dashed #d8cfbf;
   }
 
   .services-list h4 {
     font-size: 1rem;
     color: var(--color-dark-text);
-    margin-top: 0.25rem;
+    margin-top: 0.1rem;
+  }
+
+  .services-list a {
+    color: inherit;
+  }
+
+  .pathway-link {
+    margin-top: var(--spacing-md);
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   @media (max-width: 768px) {
