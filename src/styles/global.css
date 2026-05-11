@@ -1,12 +1,15 @@
 /* Global Styles */
 :root {
-  --color-primary: #2d5016;
-  --color-secondary: #6b8e23;
-  --color-accent: #d4a574;
-  --color-light-bg: #f9f7f4;
-  --color-dark-text: #1a1a1a;
-  --color-light-text: #6b6b6b;
+  --color-primary: #243223;
+  --color-secondary: #566548;
+  --color-accent: #c6a47a;
+  --color-light-bg: #f4f1eb;
+  --color-dark-text: #1c2119;
+  --color-light-text: #4a5242;
   --color-white: #ffffff;
+  --color-surface: #faf7f2;
+  --color-line: #ddd5c7;
+  --color-focus: #1e5b53;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -21,6 +24,7 @@
     sans-serif;
 
   --max-width: 1200px;
+  --shadow-soft: 0 14px 38px rgba(24, 34, 21, 0.09);
 }
 
 * {
@@ -36,7 +40,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-dark-text);
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   line-height: 1.6;
 }
 
@@ -71,7 +75,7 @@ p {
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.28s ease;
 }
 
 a:hover {
@@ -83,7 +87,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.28s ease;
 }
 
 .button-primary {
@@ -91,6 +95,9 @@ button {
   color: var(--color-white);
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-primary:hover {
@@ -102,6 +109,9 @@ button {
   color: var(--color-dark-text);
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-secondary:hover {
@@ -112,6 +122,52 @@ button {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.motion-rise {
+  animation: rise 0.75s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 768px) {

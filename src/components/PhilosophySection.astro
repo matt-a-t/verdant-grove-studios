@@ -4,7 +4,7 @@
 
 <section id="philosophy" class="philosophy">
   <div class="container">
-    <div class="philosophy-content">
+    <div class="philosophy-content motion-rise">
       <h2>Gardens designed to be peaceful, bountiful and beautiful</h2>
       
       <p>
@@ -25,6 +25,7 @@
           <p>Thoughtfully designed spaces that are as lovely to look at as they are productive.</p>
         </div>
       </div>
+      <p class="philosophy-link-wrap"><a href="/about#philosophy">Read our full philosophy</a></p>
     </div>
   </div>
 </section>
@@ -36,7 +37,7 @@
   }
 
   .philosophy-content {
-    max-width: 800px;
+    max-width: 960px;
   }
 
   .philosophy h2 {
@@ -44,25 +45,27 @@
     margin-bottom: var(--spacing-lg);
   }
 
-  .philosophy > .container > p {
+  .philosophy-content > p {
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--color-light-text);
     margin-bottom: var(--spacing-2xl);
+    max-width: 72ch;
   }
 
   .philosophy-values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+    align-items: stretch;
   }
 
   .value {
-    padding: var(--spacing-lg);
-    background-color: var(--color-white);
-    border-radius: 8px;
-    border-left: 4px solid var(--color-accent);
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-radius: 0;
+    border-left: none;
+    border-top: 3px solid var(--color-accent);
+    flex: 1;
   }
 
   .value h3 {
@@ -76,9 +79,20 @@
     color: var(--color-light-text);
   }
 
+  .philosophy-link-wrap {
+    margin-top: var(--spacing-lg);
+    margin-bottom: 0;
+  }
+
+  .philosophy-link-wrap a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+  }
+
   @media (max-width: 768px) {
     .philosophy-values {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
   }
 </style>

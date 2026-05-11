@@ -4,33 +4,45 @@
 
 <section id="gardens" class="signature-gardens">
   <div class="container">
-    <h2>Signature Gardens</h2>
+    <h2 class="motion-rise">Signature Gardens</h2>
     <p class="section-subtitle">Preview your future installation packages</p>
 
-    <div class="gardens-grid">
-      <div class="garden-card">
+    <div class="gardens-list">
+      <article class="garden-row motion-rise">
         <div class="garden-image herbal-tea"></div>
-        <h3>The Herbal Tea Garden</h3>
-        <p>A curated selection of herbs perfect for creating your own tea blends throughout the year.</p>
-      </div>
+        <div class="garden-copy">
+          <h3>The Herbal Tea Garden</h3>
+          <p>A curated selection of herbs perfect for creating your own tea blends throughout the year.</p>
+          <a href="/signature-gardens#spring-collections">Explore collection details</a>
+        </div>
+      </article>
 
-      <div class="garden-card">
+      <article class="garden-row motion-rise">
         <div class="garden-image cut-flower"></div>
-        <h3>The Cut Flower Garden</h3>
-        <p>Grow your own bouquets with seasonal blooms designed for arrangements and displays.</p>
-      </div>
+        <div class="garden-copy">
+          <h3>The Cut Flower Garden</h3>
+          <p>Grow your own bouquets with seasonal blooms designed for arrangements and displays.</p>
+          <a href="/signature-gardens#spring-collections">Explore collection details</a>
+        </div>
+      </article>
 
-      <div class="garden-card">
+      <article class="garden-row motion-rise">
         <div class="garden-image sunday-sauce"></div>
-        <h3>The Sunday Sauce Garden</h3>
-        <p>All the vegetables you need for delicious homemade pasta sauce and culinary creations.</p>
-      </div>
+        <div class="garden-copy">
+          <h3>The Sunday Sauce Garden</h3>
+          <p>All the vegetables you need for delicious homemade pasta sauce and culinary creations.</p>
+          <a href="/signature-gardens#spring-collections">Explore collection details</a>
+        </div>
+      </article>
 
-      <div class="garden-card">
+      <article class="garden-row motion-rise">
         <div class="garden-image grill-night"></div>
-        <h3>The Grill Night Garden</h3>
-        <p>Fresh vegetables, herbs, and garnishes to elevate your outdoor entertaining and gatherings.</p>
-      </div>
+        <div class="garden-copy">
+          <h3>The Grill Night Garden</h3>
+          <p>Fresh vegetables, herbs, and garnishes to elevate your outdoor entertaining and gatherings.</p>
+          <a href="/signature-gardens#spring-collections">Explore collection details</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -51,33 +63,36 @@
     text-align: center;
     color: var(--color-accent);
     font-style: italic;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
   }
 
-  .gardens-grid {
+  .gardens-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 
-  .garden-card {
-    background-color: var(--color-light-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .garden-row {
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: var(--spacing-md);
+    align-items: center;
+    border-top: 1px solid var(--color-line);
+    padding-top: var(--spacing-md);
   }
 
-  .garden-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  .garden-row:first-child {
+    border-top: none;
+    padding-top: 0;
   }
 
   .garden-image {
     width: 100%;
-    height: 250px;
+    height: 220px;
     background-size: cover;
     background-position: center;
     background-color: var(--color-secondary);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
   }
 
   .herbal-tea {
@@ -96,21 +111,25 @@
     background-image: url('https://images.unsplash.com/photo-1576270017874-d0a9e82018d1?w=600&h=400&fit=crop');
   }
 
-  .garden-card h3 {
+  .garden-copy h3 {
     color: var(--color-primary);
-    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-sm);
-    margin: 0;
+    margin: 0 0 var(--spacing-xs);
   }
 
-  .garden-card p {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
-    margin: 0;
+  .garden-copy p {
+    margin: 0 0 var(--spacing-xs);
     font-size: 0.95rem;
     color: var(--color-light-text);
   }
 
+  .garden-copy a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   @media (max-width: 768px) {
-    .gardens-grid {
+    .garden-row {
       grid-template-columns: 1fr;
     }
   }
