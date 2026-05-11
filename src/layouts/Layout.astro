@@ -71,9 +71,75 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
         font-size: 0.95rem;
       }
 
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 2rem;
+        height: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-primary);
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
       @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+
         .nav-links {
           display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: var(--color-white);
+          border-bottom: 1px solid #e5e5e5;
+          flex-direction: column;
+          gap: 0;
+          padding: var(--spacing-sm) 0;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        .nav-links li {
+          width: 100%;
+        }
+
+        .nav-links a {
+          display: block;
+          padding: var(--spacing-sm) var(--spacing-lg);
+        }
+
+        .nav-links a:hover {
+          background-color: var(--color-light-bg);
         }
       }
     </style>
@@ -82,7 +148,12 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
     <header>
       <nav>
         <a class="logo" href="/">Verdant Grove Studio</a>
-        <ul class="nav-links">
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/fall-seedlings-shop">Fall Seedlings Shop</a></li>
@@ -94,6 +165,23 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
         </ul>
       </nav>
     </header>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle') as HTMLButtonElement;
+      const navLinks = document.getElementById('nav-links');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = navLinks?.classList.toggle('is-open');
+        toggle?.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navLinks?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navLinks?.classList.remove('is-open');
+          toggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
 
     <main>
       <slot />
