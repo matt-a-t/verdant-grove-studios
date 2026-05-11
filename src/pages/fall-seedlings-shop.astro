@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Fall Seedlings Shop | Verdant Grove Studio"
+  description="Curated fall seedlings and seasonal garden collections from Verdant Grove Studio."
+>
+  <section class="shop-hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Fall Seedlings Shop</p>
+      <h1>A curated seedling studio for seasonal living</h1>
+      <p>
+        Designed as a boutique garden atelier, our fall selection is organized around how you cook,
+        gather, and live, not around shelf-style inventory.
+      </p>
+    </div>
+  </section>
+
+  <section class="collections" id="seasonal-collections">
+    <div class="container">
+      <h2>Seasonal Collections</h2>
+      <div class="collection-grid">
+        <article class="collection-card pizza">
+          <h3>Pizza Garden Kit</h3>
+          <p>
+            Aromatic herbs and rich-flavor tomatoes for homemade pizza nights that feel effortless
+            and celebratory.
+          </p>
+        </article>
+        <article class="collection-card tea">
+          <h3>Herbal Tea Garden</h3>
+          <p>
+            Calming herbs curated for steeping, gifting, and grounding daily rituals through fall.
+          </p>
+        </article>
+        <article class="collection-card pollinator">
+          <h3>Pollinator Favorites</h3>
+          <p>
+            Nectar-rich selections that keep your garden alive with movement, color, and ecological
+            generosity.
+          </p>
+        </article>
+        <article class="collection-card salad">
+          <h3>Salad Garden Collection</h3>
+          <p>
+            Crisp greens and flavorful accents chosen for frequent harvesting and beautiful bowls.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seedlings" id="individual-seedlings">
+    <div class="container">
+      <h2>Individual Seedlings</h2>
+      <p class="seedling-intro">
+        Build your own garden palette with individually selected starts, arranged by garden role.
+      </p>
+
+      <div class="category">
+        <h3>Vegetables</h3>
+        <div class="product-grid">
+          <article>
+            <h4>Chioggia Beet</h4>
+            <p>Sweet, striped roots that bring color and earthiness to cool-season cooking.</p>
+          </article>
+          <article>
+            <h4>Lacinato Kale</h4>
+            <p>Elegant leaves with deep flavor, ideal for hearty sautés and late-season soups.</p>
+          </article>
+          <article>
+            <h4>French Breakfast Radish</h4>
+            <p>Crisp and peppery, with quick growth that rewards even small-space gardeners.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Herbs</h3>
+        <div class="product-grid">
+          <article>
+            <h4>Genovese Basil</h4>
+            <p>
+              Fragrant, productive, and perfect for kitchen gardens designed around summer cooking
+              rituals.
+            </p>
+          </article>
+          <article>
+            <h4>Italian Parsley</h4>
+            <p>Bright, versatile stems for everyday finishing, sauces, and abundant harvest cuts.</p>
+          </article>
+          <article>
+            <h4>Lemon Thyme</h4>
+            <p>Citrus-toned foliage that adds lift to roasted vegetables and tea blends alike.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Flowers</h3>
+        <div class="product-grid">
+          <article>
+            <h4>Benary Zinnia Mix</h4>
+            <p>Long-stemmed blooms for vibrant bouquets and a continuously joyful cutting garden.</p>
+          </article>
+          <article>
+            <h4>Apricot Cosmos</h4>
+            <p>Airy petals in warm tones that soften raised beds with movement and romance.</p>
+          </article>
+          <article>
+            <h4>Queen Lime Marigold</h4>
+            <p>Subtle vintage color with pollinator value and strong visual structure at the edge.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .shop-hero {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background:
+      linear-gradient(to right, rgba(30, 54, 17, 0.88), rgba(30, 54, 17, 0.45)),
+      url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1900&h=1000&fit=crop') center/cover;
+  }
+
+  .hero-inner {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-xs);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+
+  .shop-hero h1,
+  .shop-hero p {
+    color: var(--color-white);
+  }
+
+  .shop-hero h1 {
+    margin-bottom: var(--spacing-sm);
+    max-width: 17ch;
+  }
+
+  .collections,
+  .seedlings {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .collections {
+    background: #f5f1e7;
+  }
+
+  .collections h2,
+  .seedlings h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .collection-card {
+    min-height: 230px;
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    border: 1px solid #dfd4bd;
+    display: grid;
+    align-content: end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .collection-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.08));
+  }
+
+  .collection-card h3,
+  .collection-card p {
+    position: relative;
+    color: #fff;
+  }
+
+  .collection-card h3 {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .pizza {
+    background: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1200&h=800&fit=crop') center/cover;
+  }
+
+  .tea {
+    background: url('https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=1200&h=800&fit=crop') center/cover;
+  }
+
+  .pollinator {
+    background: url('https://images.unsplash.com/photo-1446071103084-c257b5f70672?w=1200&h=800&fit=crop') center/cover;
+  }
+
+  .salad {
+    background: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=800&fit=crop') center/cover;
+  }
+
+  .seedlings {
+    background: #fcfaf5;
+  }
+
+  .seedling-intro {
+    max-width: 70ch;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .category {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .category h3 {
+    color: #2a3b17;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .product-grid article {
+    background: #fff;
+    border: 1px solid #e6dcc8;
+    border-radius: 10px;
+    padding: var(--spacing-md);
+  }
+
+  .product-grid h4 {
+    color: var(--color-primary);
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-grid p {
+    font-size: 0.97rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 920px) {
+    .collection-grid,
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

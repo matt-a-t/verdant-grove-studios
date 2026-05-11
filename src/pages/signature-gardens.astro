@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Signature Gardens | Verdant Grove Studio"
+  description="Curated spring garden collections with mood, plant palette, maintenance level, and lifestyle fit."
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Signature Gardens</p>
+      <h1>Spring collections designed for how you want to live outdoors</h1>
+      <p>
+        Each collection blends edible and ornamental planting with a clear aesthetic direction,
+        practical care rhythm, and a lifestyle purpose.
+      </p>
+    </div>
+  </section>
+
+  <section class="collections" id="spring-collections">
+    <div class="container">
+      <h2>Spring Collections</h2>
+      <div class="grid">
+        <article>
+          <h3>Grill Night Garden</h3>
+          <p><strong>Mood imagery:</strong> Smoky evenings, friends in the backyard, easy abundance.</p>
+          <p><strong>Plant palette:</strong> Peppers, rosemary, thyme, scallions, cherry tomatoes.</p>
+          <p><strong>Maintenance level:</strong> Moderate</p>
+          <p><strong>Lifestyle description:</strong> For households that love outdoor dinners and weekend hosting.</p>
+        </article>
+        <article>
+          <h3>Herbal Tea Garden</h3>
+          <p><strong>Mood imagery:</strong> Quiet mornings, clipped stems, steaming mugs on the porch.</p>
+          <p><strong>Plant palette:</strong> Chamomile, lemon balm, mint, tulsi, lavender.</p>
+          <p><strong>Maintenance level:</strong> Easy</p>
+          <p><strong>Lifestyle description:</strong> For slow rituals and calming daily routines.</p>
+        </article>
+        <article>
+          <h3>Sunday Sauce Garden</h3>
+          <p><strong>Mood imagery:</strong> Family recipes, simmering pots, summer harvest baskets.</p>
+          <p><strong>Plant palette:</strong> San Marzano tomatoes, basil, oregano, garlic, parsley.</p>
+          <p><strong>Maintenance level:</strong> Moderate</p>
+          <p><strong>Lifestyle description:</strong> For home cooks who want flavor straight from the garden.</p>
+        </article>
+        <article>
+          <h3>Taco Night Garden</h3>
+          <p><strong>Mood imagery:</strong> Colorful platters, lively weeknights, fresh toppings at hand.</p>
+          <p><strong>Plant palette:</strong> Cilantro, jalapeno, tomatoes, onions, lime-friendly herbs.</p>
+          <p><strong>Maintenance level:</strong> Easy to moderate</p>
+          <p><strong>Lifestyle description:</strong> For bold flavors and quick, joyful meals.</p>
+        </article>
+        <article>
+          <h3>Cut Flower Garden</h3>
+          <p><strong>Mood imagery:</strong> Hand-tied bouquets, kitchen color, seasonal expression.</p>
+          <p><strong>Plant palette:</strong> Zinnias, cosmos, snapdragons, celosia, basil fillers.</p>
+          <p><strong>Maintenance level:</strong> Moderate</p>
+          <p><strong>Lifestyle description:</strong> For homes that love floral beauty in every room.</p>
+        </article>
+        <article>
+          <h3>Pollinator Garden</h3>
+          <p><strong>Mood imagery:</strong> Soft movement, bees and butterflies, ecological harmony.</p>
+          <p><strong>Plant palette:</strong> Echinacea, salvia, milkweed, yarrow, flowering herbs.</p>
+          <p><strong>Maintenance level:</strong> Easy</p>
+          <p><strong>Lifestyle description:</strong> For clients who want a living landscape that gives back.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages" id="installation-packages">
+    <div class="container">
+      <h2>Installation Packages</h2>
+      <div class="package-grid">
+        <article>
+          <h3>Studio Placement</h3>
+          <ul>
+            <li>2 beds</li>
+            <li>3 beds</li>
+            <li>4 beds</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Framed Garden Installation</h3>
+          <ul>
+            <li>2 beds</li>
+            <li>3 beds</li>
+            <li>4 beds</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background:
+      radial-gradient(circle at 80% 22%, rgba(212, 165, 116, 0.3) 0 20%, transparent 22%),
+      linear-gradient(160deg, #f7f4ed, #eef2e7 60%);
+  }
+
+  .hero-inner {
+    max-width: 860px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    color: #4b5a27;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+  }
+
+  .hero h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    max-width: 18ch;
+  }
+
+  .collections,
+  .packages {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .collections {
+    background: var(--color-white);
+  }
+
+  .collections h2,
+  .packages h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .grid article {
+    border: 1px solid #e7e0d1;
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    background: #fcfbf8;
+  }
+
+  .grid h3 {
+    color: #2a3b17;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .grid p {
+    font-size: 0.98rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .packages {
+    background: #f3f0e8;
+  }
+
+  .package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .package-grid article {
+    border: 1px solid #dfd5c2;
+    border-radius: 12px;
+    background: #fff;
+    padding: var(--spacing-lg);
+  }
+
+  .package-grid h3 {
+    color: #2a3b17;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .package-grid ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .package-grid li {
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    background: #f7f4ec;
+    color: #42512a;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .grid,
+    .package-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

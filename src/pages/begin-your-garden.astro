@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Begin Your Garden | Verdant Grove Studio"
+  description="Start a calm, premium consultation experience with Verdant Grove Studio."
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Consultation</p>
+      <h1>Begin Your Garden</h1>
+      <p>
+        Share your goals and home context, and we will guide you toward the right seasonal path,
+        installation timeline, and scope.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-layout">
+    <div class="container layout-grid">
+      <form class="inquiry" aria-label="Garden consultation inquiry form">
+        <h2>Inquiry Form</h2>
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Project Interest
+          <select name="interest" required>
+            <option value="">Select one</option>
+            <option>Spring 2027 Installation</option>
+            <option>Fall Seedlings</option>
+            <option>Planting Plan</option>
+            <option>Signature Garden Collection</option>
+          </select>
+        </label>
+        <label>
+          Tell us about your space
+          <textarea name="message" rows="5" placeholder="Sunlight, goals, style, and how you want to use the space."></textarea>
+        </label>
+        <button class="button-primary" type="submit">Submit Inquiry</button>
+      </form>
+
+      <aside class="details">
+        <article>
+          <h3>Service Area</h3>
+          <p>
+            Indianapolis and surrounding communities. Regional projects may be available by request.
+          </p>
+        </article>
+        <article>
+          <h3>Timeline Expectations</h3>
+          <p>
+            Consultation responses are typically sent within 2-3 business days. Installation slots
+            are limited and seasonally scheduled.
+          </p>
+        </article>
+        <article>
+          <h3>Ideal Client Fit</h3>
+          <p>
+            Homeowners who value intentional design, practical beauty, and a long-term relationship
+            with their garden space.
+          </p>
+        </article>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background:
+      radial-gradient(circle at 22% 22%, rgba(212, 165, 116, 0.27) 0 16%, transparent 18%),
+      linear-gradient(165deg, #f7f2e8, #edf1e4 65%);
+  }
+
+  .hero-inner {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    margin-bottom: var(--spacing-xs);
+    color: #4b5a27;
+    font-weight: 700;
+  }
+
+  .hero h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .contact-layout {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: #fbfaf6;
+  }
+
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .inquiry {
+    background: #fff;
+    border: 1px solid #e6decd;
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    display: grid;
+    gap: var(--spacing-sm);
+  }
+
+  .inquiry h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .inquiry label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: #32411f;
+  }
+
+  .inquiry input,
+  .inquiry select,
+  .inquiry textarea {
+    border: 1px solid #d6ccb8;
+    border-radius: 8px;
+    padding: 0.7rem 0.8rem;
+    font: inherit;
+    color: #2a2a2a;
+    background: #fff;
+  }
+
+  .inquiry textarea {
+    resize: vertical;
+  }
+
+  .details {
+    display: grid;
+    gap: var(--spacing-sm);
+  }
+
+  .details article {
+    background: #f4efe3;
+    border: 1px solid #e2d7c4;
+    border-radius: 10px;
+    padding: var(--spacing-md);
+  }
+
+  .details h3 {
+    color: #2a3b17;
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 900px) {
+    .layout-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

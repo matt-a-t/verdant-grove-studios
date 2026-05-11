@@ -1,0 +1,310 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Spring 2027 Installations | Verdant Grove Studio"
+  description="Garden spaces designed to nourish. Join the Spring 2027 client waitlist for raised bed installations and seasonal support."
+>
+  <section class="installations-hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Spring 2027 Installations</p>
+      <h1>Garden spaces designed to nourish</h1>
+      <p>
+        For homes that want beauty and abundance without overwhelm, we design and install raised
+        bed gardens that feel intentional from the first sketch to every seasonal harvest.
+      </p>
+      <a class="button-primary" href="#waitlist">Join the Spring 2027 Client Waitlist</a>
+    </div>
+  </section>
+
+  <section class="offerings" id="what-we-offer">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="offer-grid">
+        <article><h3>Raised bed installation</h3></article>
+        <article><h3>Planting plans</h3></article>
+        <article><h3>Plant installation</h3></article>
+        <article><h3>Seasonal planting support</h3></article>
+        <article><h3>Edible + floral gardens</h3></article>
+        <article><h3>Garden styling</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+      <h2>Our Process</h2>
+      <div class="process-steps">
+        <article>
+          <p class="step-label">Step 1</p>
+          <h3>Consultation</h3>
+          <p>Discuss sunlight, goals, and aesthetics to define the right direction for your home.</p>
+        </article>
+        <article>
+          <p class="step-label">Step 2</p>
+          <h3>Design</h3>
+          <p>Receive a tailored layout with plant recommendations that match your lifestyle.</p>
+        </article>
+        <article>
+          <p class="step-label">Step 3</p>
+          <h3>Installation</h3>
+          <p>We install beds, soil, and planting so your garden begins with clarity and momentum.</p>
+        </article>
+        <article>
+          <p class="step-label">Step 4</p>
+          <h3>Seasonal Support</h3>
+          <p>Guides and optional maintenance keep your garden thriving through each season.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="concept-gallery">
+    <div class="container">
+      <h2>Gallery + Concepts</h2>
+      <p class="gallery-lead">
+        Even before full installations begin, we share a visual direction through renderings,
+        inspiration imagery, styled mockups, and signature brand visuals.
+      </p>
+      <div class="gallery-grid" aria-label="Concept gallery previews">
+        <figure class="tile renderings"><figcaption>Renderings</figcaption></figure>
+        <figure class="tile inspiration"><figcaption>Inspiration Imagery</figcaption></figure>
+        <figure class="tile mockups"><figcaption>Styled Mockups</figcaption></figure>
+        <figure class="tile visuals"><figcaption>Brand Visuals</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="waitlist" id="waitlist">
+    <div class="container waitlist-inner">
+      <h2>Join the Spring 2027 Client Waitlist</h2>
+      <p>
+        A limited number of installation spots will open for Spring 2027. Join now to receive
+        priority details and early consultation booking.
+      </p>
+      <form class="waitlist-form">
+        <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+        <button type="submit" class="button-secondary">Join the Spring 2027 Client Waitlist</button>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .installations-hero {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background:
+      linear-gradient(120deg, rgba(45, 80, 22, 0.9), rgba(75, 90, 39, 0.88)),
+      url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1800&h=1000&fit=crop') center/cover;
+    color: var(--color-white);
+  }
+
+  .hero-inner {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    margin-bottom: var(--spacing-xs);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+
+  .installations-hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+    max-width: 16ch;
+  }
+
+  .installations-hero p {
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 64ch;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .offerings,
+  .process,
+  .gallery,
+  .waitlist {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .offerings {
+    background: #f5f3ee;
+  }
+
+  .offerings h2,
+  .process h2,
+  .gallery h2,
+  .waitlist h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .offer-grid article {
+    border-radius: 10px;
+    background: var(--color-white);
+    border: 1px solid #e8e3d8;
+    padding: var(--spacing-md);
+  }
+
+  .offer-grid h3 {
+    font-size: 1.1rem;
+    color: #2a3b17;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .process-steps article {
+    border-left: 4px solid var(--color-accent);
+    background: #faf8f4;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+  }
+
+  .step-label {
+    color: #4b5a27;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .process-steps h3 {
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+  }
+
+  .gallery {
+    background: var(--color-light-bg);
+  }
+
+  .gallery-lead {
+    max-width: 72ch;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .tile {
+    position: relative;
+    min-height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd5c6;
+    display: flex;
+    align-items: end;
+  }
+
+  .tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+  }
+
+  .tile figcaption {
+    position: relative;
+    color: #fff;
+    padding: var(--spacing-sm);
+    font-weight: 600;
+  }
+
+  .renderings {
+    background: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1000&h=700&fit=crop') center/cover;
+  }
+
+  .inspiration {
+    background: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1000&h=700&fit=crop') center/cover;
+  }
+
+  .mockups {
+    background: url('https://images.unsplash.com/photo-1446071103084-c257b5f70672?w=1000&h=700&fit=crop') center/cover;
+  }
+
+  .visuals {
+    background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1000&h=700&fit=crop') center/cover;
+  }
+
+  .waitlist {
+    background: linear-gradient(135deg, #2d5016, #4b5a27);
+  }
+
+  .waitlist-inner {
+    max-width: 760px;
+  }
+
+  .waitlist h2,
+  .waitlist p {
+    color: var(--color-white);
+  }
+
+  .waitlist-form {
+    margin-top: var(--spacing-md);
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .waitlist-form input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.85rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  .waitlist-form input::placeholder {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .waitlist-form button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  @media (max-width: 900px) {
+    .offer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .process-steps {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .offer-grid,
+    .process-steps,
+    .gallery-grid,
+    .waitlist-form {
+      grid-template-columns: 1fr;
+    }
+
+    .waitlist-form button {
+      width: 100%;
+    }
+  }
+</style>

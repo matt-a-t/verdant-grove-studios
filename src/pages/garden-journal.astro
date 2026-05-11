@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Garden Journal | Verdant Grove Studio"
+  description="Seasonal living, garden design, and slow-living guidance from Verdant Grove Studio."
+>
+  <section class="journal-hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Garden Journal</p>
+      <h1>Field notes for seasonal living and beautiful, useful gardens</h1>
+      <p>
+        This journal is where practical guidance meets the emotional side of gardening: what to
+        plant, how to design, and how to make outdoor life feel grounded and generous.
+      </p>
+    </div>
+  </section>
+
+  <section class="journal-categories">
+    <div class="container">
+      <h2>Seasonal Living</h2>
+      <div class="posts">
+        <article>
+          <h3>What to plant in Indiana in fall</h3>
+          <p>A practical planting calendar for cool-season harvests that still feel abundant.</p>
+        </article>
+        <article>
+          <h3>Transitioning gardens into winter</h3>
+          <p>How to close the season with intention and prepare your beds for a strong spring.</p>
+        </article>
+      </div>
+
+      <h2>Garden Design</h2>
+      <div class="posts">
+        <article>
+          <h3>Designing raised beds that feel beautiful</h3>
+          <p>Layout principles that create order, elegance, and daily ease.</p>
+        </article>
+        <article>
+          <h3>Best layouts for family gardens</h3>
+          <p>Flexible bed arrangements that support cooking, gathering, and kid-friendly access.</p>
+        </article>
+      </div>
+
+      <h2>Slow Living / Lifestyle</h2>
+      <div class="posts">
+        <article>
+          <h3>Gardening rituals</h3>
+          <p>Small, repeatable rhythms that keep gardening restorative instead of overwhelming.</p>
+        </article>
+        <article>
+          <h3>Hosting from the garden</h3>
+          <p>Simple ways to shape memorable meals and gatherings around seasonal harvest.</p>
+        </article>
+        <article>
+          <h3>Cut flower arrangements</h3>
+          <p>Garden-to-vase techniques for balanced, natural bouquets from your own beds.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .journal-hero {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background:
+      linear-gradient(to right, rgba(45, 80, 22, 0.9), rgba(45, 80, 22, 0.55)),
+      url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1800&h=900&fit=crop') center/cover;
+  }
+
+  .hero-inner {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-xs);
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 700;
+  }
+
+  .journal-hero h1,
+  .journal-hero p {
+    color: var(--color-white);
+  }
+
+  .journal-hero h1 {
+    margin-bottom: var(--spacing-sm);
+    max-width: 18ch;
+  }
+
+  .journal-categories {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: #f7f5ef;
+  }
+
+  .journal-categories h2 {
+    color: #2a3b17;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+  }
+
+  .journal-categories h2:first-child {
+    margin-top: 0;
+  }
+
+  .posts {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .posts article {
+    background: #fff;
+    border: 1px solid #e6dfcf;
+    border-radius: 10px;
+    padding: var(--spacing-md);
+  }
+
+  .posts h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  @media (max-width: 960px) {
+    .posts {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

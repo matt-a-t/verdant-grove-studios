@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Verdant Grove Studio"
+  description="Our story, philosophy, and design approach to intentional outdoor living through raised beds"
+>
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <p class="eyebrow">About</p>
+      <h1>Thoughtful gardens for everyday life</h1>
+      <p class="lead">
+        Verdant Grove Studio began with the belief that gardens should support everyday life,
+        not become another overwhelming project. We create spaces that are productive,
+        restorative, and designed to evolve beautifully through the seasons.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section" id="story">
+    <div class="container">
+      <h2>Your Story</h2>
+      <p>
+        Verdant Grove started in the in-between moments: noticing neighbors who wanted to grow
+        food but felt unsure where to begin, and families who loved the idea of a garden but did
+        not have time for trial and error. The studio grew from a simple goal to make growing
+        feel possible, elegant, and deeply connected to home.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section muted" id="philosophy">
+    <div class="container">
+      <h2>Your Philosophy</h2>
+      <p class="subhead">Not just landscaping. Intentional outdoor living.</p>
+      <p>
+        We design spaces that invite you outside more often: to clip herbs before dinner, pick
+        flowers on a slow morning, and move through the seasons with rhythm instead of rush.
+        Beauty matters. Ease matters. Daily use matters.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section" id="approach">
+    <div class="container">
+      <h2>Your Design Approach</h2>
+      <p class="subhead">Structure + beauty + usability</p>
+      <div class="pillars">
+        <article>
+          <h3>Structure</h3>
+          <p>
+            Clear layouts, intentional pathways, and defined planting zones that keep the garden
+            organized and easy to maintain.
+          </p>
+        </article>
+        <article>
+          <h3>Beauty</h3>
+          <p>
+            Layered textures, seasonal color, and balanced forms so your garden feels as refined
+            as the rest of your home.
+          </p>
+        </article>
+        <article>
+          <h3>Usability</h3>
+          <p>
+            Practical placement, comfortable access, and planting choices that match how your
+            household actually cooks, gathers, and lives.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section muted" id="raised-beds">
+    <div class="container">
+      <h2>Why Raised Beds</h2>
+      <div class="reasons">
+        <article>
+          <h3>Accessibility</h3>
+          <p>
+            Raised beds reduce bending and strain, making gardening more comfortable for all ages
+            and stages of life.
+          </p>
+        </article>
+        <article>
+          <h3>Aesthetics</h3>
+          <p>
+            They add beautiful structure to the landscape and create a clean, intentional visual
+            language in the yard.
+          </p>
+        </article>
+        <article>
+          <h3>Productivity</h3>
+          <p>
+            Better soil control, improved drainage, and focused planting plans help gardens produce
+            more with less overwhelm.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
+    background:
+      radial-gradient(circle at 85% 20%, rgba(212, 165, 116, 0.28) 0 22%, transparent 24%),
+      radial-gradient(circle at 10% 80%, rgba(107, 142, 35, 0.16) 0 26%, transparent 28%),
+      var(--color-light-bg);
+  }
+
+  .about-hero-inner {
+    max-width: 860px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .about-hero h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    max-width: 18ch;
+  }
+
+  .lead {
+    max-width: 70ch;
+    font-size: 1.1rem;
+  }
+
+  .about-section {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .about-section.muted {
+    background-color: #f5f3ee;
+  }
+
+  .about-section h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-section .subhead {
+    color: #4b5a27;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-section > .container > p {
+    max-width: 72ch;
+  }
+
+  .pillars,
+  .reasons {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: var(--spacing-md);
+  }
+
+  .pillars article,
+  .reasons article {
+    border: 1px solid #e8e3d8;
+    background: var(--color-white);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+  }
+
+  .pillars h3,
+  .reasons h3 {
+    color: #2a3b17;
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 900px) {
+    .pillars,
+    .reasons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
