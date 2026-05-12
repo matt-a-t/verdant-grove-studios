@@ -76,8 +76,8 @@ import Layout from '../layouts/Layout.astro';
   .hero {
     padding: var(--spacing-2xl) var(--spacing-lg);
     background:
-      radial-gradient(circle at 22% 22%, rgba(212, 165, 116, 0.27) 0 16%, transparent 18%),
-      linear-gradient(165deg, #f7f2e8, #edf1e4 65%);
+      radial-gradient(circle at 22% 22%, rgba(192, 123, 90, 0.27) 0 16%, transparent 18%),
+      linear-gradient(165deg, var(--color-light-bg), rgba(138, 179, 160, 0.3) 65%);
   }
 
   .hero-inner {
@@ -89,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.08em;
     font-size: 0.82rem;
     margin-bottom: var(--spacing-xs);
-    color: #4b5a27;
+    color: var(--color-accent-2);
     font-weight: 700;
   }
 
@@ -100,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
 
   .contact-layout {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background: #fbfaf6;
+    background: var(--color-light-bg);
   }
 
   .layout-grid {
@@ -111,8 +111,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .inquiry {
-    background: #fff;
-    border: 1px solid #e6decd;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: var(--spacing-lg);
     display: grid;
@@ -128,18 +128,18 @@ import Layout from '../layouts/Layout.astro';
     display: grid;
     gap: 0.35rem;
     font-weight: 600;
-    color: #32411f;
+    color: var(--color-hero);
   }
 
   .inquiry input,
   .inquiry select,
   .inquiry textarea {
-    border: 1px solid #d6ccb8;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0.7rem 0.8rem;
     font: inherit;
-    color: #2a2a2a;
-    background: #fff;
+    color: var(--color-dark-text);
+    background: var(--color-white);
   }
 
   .inquiry textarea {
@@ -152,14 +152,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .details article {
-    background: #f4efe3;
-    border: 1px solid #e2d7c4;
+    background: rgba(138, 179, 160, 0.16);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: var(--spacing-md);
   }
 
   .details h3 {
-    color: #2a3b17;
+    color: var(--color-hero);
     margin-bottom: 0.35rem;
   }
 

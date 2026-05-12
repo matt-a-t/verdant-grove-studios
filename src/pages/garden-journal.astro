@@ -66,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
   .journal-hero {
     padding: var(--spacing-2xl) var(--spacing-lg);
     background:
-      linear-gradient(to right, rgba(45, 80, 22, 0.9), rgba(45, 80, 22, 0.55)),
+      linear-gradient(to right, rgba(38, 57, 47, 0.9), rgba(38, 57, 47, 0.55)),
       url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1800&h=900&fit=crop') center/cover;
   }
 
@@ -95,11 +95,11 @@ import Layout from '../layouts/Layout.astro';
 
   .journal-categories {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background: #f7f5ef;
+    background: var(--color-light-bg);
   }
 
   .journal-categories h2 {
-    color: #2a3b17;
+    color: var(--color-hero);
     margin-bottom: var(--spacing-sm);
     margin-top: var(--spacing-lg);
   }
@@ -115,8 +115,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .posts article {
-    background: #fff;
-    border: 1px solid #e6dfcf;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: var(--spacing-md);
   }

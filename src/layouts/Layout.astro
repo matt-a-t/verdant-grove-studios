@@ -20,8 +20,9 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
     <title>{title}</title>
     <style>
       header {
-        background-color: var(--color-white);
-        border-bottom: 1px solid #e5e5e5;
+        background-color: rgba(247, 242, 236, 0.92);
+        border-bottom: 1px solid var(--color-border);
+        backdrop-filter: blur(6px);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -55,8 +56,12 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
         font-weight: 500;
       }
 
+      .nav-links a:hover {
+        color: var(--color-accent-2);
+      }
+
       footer {
-        background-color: var(--color-primary);
+        background-color: var(--color-hero);
         color: var(--color-white);
         padding: var(--spacing-2xl) var(--spacing-lg);
         margin-top: var(--spacing-2xl);

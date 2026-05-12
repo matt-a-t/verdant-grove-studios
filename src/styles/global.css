@@ -1,12 +1,15 @@
 /* Global Styles */
 :root {
-  --color-primary: #2d5016;
-  --color-secondary: #6b8e23;
-  --color-accent: #d4a574;
-  --color-light-bg: #f9f7f4;
-  --color-dark-text: #1a1a1a;
-  --color-light-text: #6b6b6b;
+  --color-hero: #26392f;
+  --color-primary: #26392f;
+  --color-secondary: #8ab3a0;
+  --color-accent: #cfafa7;
+  --color-accent-2: #c07b5a;
+  --color-light-bg: #f7f2ec;
+  --color-dark-text: #4a413b;
+  --color-light-text: #6f655f;
   --color-white: #ffffff;
+  --color-border: #dfd1c5;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -36,7 +39,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-dark-text);
-  background-color: var(--color-white);
+  background-color: var(--color-light-bg);
   line-height: 1.6;
 }
 
@@ -75,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-2);
 }
 
 button {
@@ -87,7 +90,7 @@ button {
 }
 
 .button-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-hero);
   color: var(--color-white);
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: 600;
@@ -95,6 +98,7 @@ button {
 
 .button-primary:hover {
   background-color: var(--color-secondary);
+  color: var(--color-hero);
 }
 
 .button-secondary {
@@ -105,7 +109,8 @@ button {
 }
 
 .button-secondary:hover {
-  background-color: #c49461;
+  background-color: var(--color-accent-2);
+  color: var(--color-white);
 }
 
 .container {

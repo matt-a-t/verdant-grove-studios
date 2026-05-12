@@ -122,7 +122,7 @@ import Layout from '../layouts/Layout.astro';
   .shop-hero {
     padding: var(--spacing-2xl) var(--spacing-lg);
     background:
-      linear-gradient(to right, rgba(30, 54, 17, 0.88), rgba(30, 54, 17, 0.45)),
+      linear-gradient(to right, rgba(38, 57, 47, 0.88), rgba(38, 57, 47, 0.45)),
       url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1900&h=1000&fit=crop') center/cover;
   }
 
@@ -155,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .collections {
-    background: #f5f1e7;
+    background: var(--color-light-bg);
   }
 
   .collections h2,
@@ -174,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
     min-height: 230px;
     border-radius: 12px;
     padding: var(--spacing-md);
-    border: 1px solid #dfd4bd;
+    border: 1px solid var(--color-border);
     display: grid;
     align-content: end;
     position: relative;
@@ -191,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
   .collection-card h3,
   .collection-card p {
     position: relative;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .collection-card h3 {
@@ -215,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .seedlings {
-    background: #fcfaf5;
+    background: var(--color-light-bg);
   }
 
   .seedling-intro {
@@ -228,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .category h3 {
-    color: #2a3b17;
+    color: var(--color-hero);
     margin-bottom: var(--spacing-sm);
   }
 
@@ -239,8 +239,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .product-grid article {
-    background: #fff;
-    border: 1px solid #e6dcc8;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: var(--spacing-md);
   }
