@@ -106,9 +106,10 @@ import Layout from '../layouts/Layout.astro';
   .about-hero {
     padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
     background:
-      radial-gradient(circle at 85% 20%, rgba(212, 165, 116, 0.28) 0 22%, transparent 24%),
-      radial-gradient(circle at 10% 80%, rgba(107, 142, 35, 0.16) 0 26%, transparent 28%),
+      radial-gradient(circle at 85% 20%, rgba(192, 123, 90, 0.3) 0 22%, transparent 24%),
+      radial-gradient(circle at 10% 80%, rgba(138, 179, 160, 0.24) 0 26%, transparent 28%),
       var(--color-light-bg);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .about-hero-inner {
@@ -140,7 +141,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .about-section.muted {
-    background-color: #f5f3ee;
+    background-color: var(--color-light-bg);
   }
 
   .about-section h2 {
@@ -149,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .about-section .subhead {
-    color: #4b5a27;
+    color: var(--color-accent-2);
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
   }
@@ -168,7 +169,7 @@ import Layout from '../layouts/Layout.astro';
 
   .pillars article,
   .reasons article {
-    border: 1px solid #e8e3d8;
+    border: 1px solid var(--color-border);
     background: var(--color-white);
     border-radius: 10px;
     padding: var(--spacing-md);
@@ -176,7 +177,7 @@ import Layout from '../layouts/Layout.astro';
 
   .pillars h3,
   .reasons h3 {
-    color: #2a3b17;
+    color: var(--color-hero);
     margin-bottom: var(--spacing-xs);
     font-size: 1.15rem;
   }
