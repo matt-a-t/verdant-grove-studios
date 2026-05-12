@@ -32,6 +32,7 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: var(--spacing-md);
         padding: var(--spacing-md) var(--spacing-lg);
         max-width: var(--max-width);
         margin: 0 auto;
@@ -42,17 +43,25 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
         font-size: 1.5rem;
         color: var(--color-primary);
         font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
 
       .nav-links {
         display: flex;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-sm);
         list-style: none;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+      }
+
+      .nav-links li {
+        flex: 0 0 auto;
       }
 
       .nav-links a {
         color: var(--color-dark-text);
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 500;
       }
 
@@ -95,7 +104,6 @@ const { title = 'Verdant Grove Studio', description = 'Raised beds for intention
           <li><a href="/signature-gardens">Signature Gardens</a></li>
           <li><a href="/garden-journal">Garden Journal</a></li>
           <li><a href="/begin-your-garden">Begin Your Garden</a></li>
-          <li><a href="/#newsletter">Join the List</a></li>
         </ul>
       </nav>
     </header>
