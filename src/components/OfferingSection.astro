@@ -7,44 +7,50 @@
     <div class="offerings-grid">
       <!-- Fall 2026 -->
       <div class="pathway fall-pathway">
-        <h3>Fall 2026 Offerings</h3>
-        <p class="pathway-tagline">Start Growing This Season</p>
-        
-        <ul class="services-list">
-          <li>
-            <span class="service-icon">🌱</span>
-            <h4>Seedlings</h4>
-          </li>
-          <li>
-            <span class="service-icon">🛠️</span>
-            <h4>Raised Bed Reset</h4>
-          </li>
-          <li>
-            <span class="service-icon">🪴</span>
-            <h4>Balcony Box Refresh</h4>
-          </li>
-        </ul>
+        <div class="pathway-media">
+          <img class="pathway-image" src="/brown-county-sunset.JPEG" alt="Warm sunset light over a fall garden landscape in Brown County." />
+        </div>
+
+        <div class="pathway-content">
+          <h2>Fall 2026</h2>
+          <a class="pathway-tagline pathway-button button-secondary" href="/fall-seedlings-shop/">Start Growing This Season</a>
+
+          <ul class="services-list">
+            <li>
+              <h4>Seedlings</h4>
+            </li>
+            <li>
+              <h4>Raised Bed Reset</h4>
+            </li>
+            <li>
+              <h4>Balcony Box Refresh</h4>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- Spring 2027 -->
       <div class="pathway spring-pathway">
-        <h3>Spring 2027 Offerings</h3>
-        <p class="pathway-tagline">Garden Installations</p>
-        
-        <ul class="services-list">
-          <li>
-            <span class="service-icon">🏡</span>
-            <h4>Signature Gardens</h4>
-          </li>
-          <li>
-            <span class="service-icon">📋</span>
-            <h4>Planting Plans</h4>
-          </li>
-          <li>
-            <span class="service-icon">🪴</span>
-            <h4>Balcony Boxes</h4>
-          </li>
-        </ul>
+        <div class="pathway-media">
+          <img class="pathway-image" src="/washington-dc-tulips.jpeg" alt="Spring tulips in bloom in Washington, DC." />
+        </div>
+
+        <div class="pathway-content">
+          <h2>Spring 2027</h2>
+          <a class="pathway-tagline pathway-button pathway-button-spring" href="/spring-2027-installations/">Garden Installations</a>
+
+          <ul class="services-list">
+            <li>
+              <h4>Signature Gardens</h4>
+            </li>
+            <li>
+              <h4>Planting Plans</h4>
+            </li>
+            <li>
+              <h4>Balcony Boxes</h4>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -56,29 +62,60 @@
     padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
-  .container h2 {
+  .pathway-content h2 {
     text-align: center;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
   }
 
   .offerings-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0;
   }
 
   .pathway {
-    padding: 0;
+    --pathway-tint: var(--color-accent);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: var(--spacing-xl);
+    align-items: center;
+    padding: var(--spacing-xl) 0;
   }
 
-  .pathway:first-child {
-    padding-right: var(--spacing-xl);
+  .spring-pathway {
+    --pathway-tint: var(--color-secondary);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   }
 
   .pathway + .pathway {
-    border-left: 1px solid var(--color-border);
-    padding-left: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .pathway-media {
+    position: relative;
+  }
+
+  .spring-pathway .pathway-media {
+    order: 2;
+  }
+
+  .spring-pathway .pathway-content {
+    order: 1;
+  }
+
+  .pathway-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .pathway-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .pathway h3 {
@@ -88,11 +125,31 @@
   }
 
   .pathway-tagline {
-    font-size: 1rem;
-    color: var(--color-accent);
-    font-style: italic;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-lg);
     text-align: center;
+  }
+
+  .pathway-button {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.2;
+  }
+
+  .pathway-button-spring {
+    background-color: var(--color-secondary);
+    color: var(--color-hero);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: 600;
+  }
+
+  .pathway-button-spring:hover {
+    background-color: var(--color-hero);
+    color: var(--color-white);
   }
 
   .services-list {
@@ -110,33 +167,26 @@
     justify-content: center;
   }
 
-  .service-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
   .services-list h4 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: var(--color-dark-text);
     margin-top: 0.25rem;
     text-align: center;
   }
 
   @media (max-width: 768px) {
-    .offerings-grid {
+    .pathway {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .spring-pathway {
       grid-template-columns: 1fr;
     }
 
-    .pathway:first-child {
-      padding-right: 0;
-      padding-bottom: var(--spacing-xl);
-    }
-
-    .pathway + .pathway {
-      border-left: 0;
-      border-top: 1px solid var(--color-border);
-      padding-left: 0;
-      padding-top: var(--spacing-xl);
+    .spring-pathway .pathway-media,
+    .spring-pathway .pathway-content {
+      order: initial;
     }
   }
 </style>
